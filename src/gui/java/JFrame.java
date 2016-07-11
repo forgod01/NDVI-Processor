@@ -7,6 +7,7 @@ import java.io.PrintStream;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import gui.actionlisteners.java.GreyscaleButton;
 import gui.actionlisteners.java.OpenButton;
 
 import javax.swing.JToolBar;
@@ -24,6 +25,7 @@ import javax.swing.JTextArea;
 import java.awt.Dimension;
 
 import main.java.*;
+import javax.swing.JProgressBar;
 
 
 public class JFrame extends javax.swing.JFrame {
@@ -31,6 +33,7 @@ public class JFrame extends javax.swing.JFrame {
 	private JPanel contentPane;
 	public static JPanel imagePanel;
 	public static JLabel image;
+	public static JProgressBar progressBar;
 
 	/**
 	 * Launch the application.
@@ -73,6 +76,9 @@ public class JFrame extends javax.swing.JFrame {
 		JMenuItem mntmCreateGrayscale = new JMenuItem("Create Grayscale");
 		mnRun.add(mntmCreateGrayscale);
 		
+		GreyscaleButton greyscaleButton = new GreyscaleButton();
+		mntmCreateGrayscale.addActionListener(greyscaleButton);
+		
 		JMenuItem mntmOverlayGradient = new JMenuItem("Overlay Gradient");
 		mnRun.add(mntmOverlayGradient);
 		contentPane = new JPanel();
@@ -85,6 +91,9 @@ public class JFrame extends javax.swing.JFrame {
 		
 		image  = new JLabel(new ImageIcon(Main.imgh.img));
 		imagePanel.add(image);
+		
+		progressBar = new JProgressBar();
+		contentPane.add(progressBar, BorderLayout.SOUTH);
 		
 		
 		

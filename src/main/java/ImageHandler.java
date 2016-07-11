@@ -19,10 +19,10 @@ public class ImageHandler {
 		img = new BufferedImage(1024, 720, BufferedImage.TYPE_INT_ARGB);
 	}
 	//read image
-	public void setFile(File f){
+	public void setImage(BufferedImage image){
 		try{
-			img = ImageIO.read(f);
-			JFrame.image.setIcon(new ImageIcon());
+			img = image;
+			JFrame.image.setIcon(new ImageIcon(img));
 			JFrame.imagePanel.repaint();
 			} catch(Exception e){
 				System.out.println(e);
