@@ -43,9 +43,6 @@ public class NdviCalculator {
 			}
 		 	
 		 	pixels[i] = (255 << 24) | (greyscale << 16) | (greyscale << 8) | greyscale;
-		 	
-		 	JFrame.progressBar.setValue((pixels.length)/(i + 1) *100);
-		 	JFrame.progressBar.repaint();
 		}
 		return img;
 	}

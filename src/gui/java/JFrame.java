@@ -33,7 +33,6 @@ public class JFrame extends javax.swing.JFrame {
 	private JPanel contentPane;
 	public static JPanel imagePanel;
 	public static JLabel image;
-	public static JProgressBar progressBar;
 
 	/**
 	 * Launch the application.
@@ -91,9 +90,6 @@ public class JFrame extends javax.swing.JFrame {
 		
 		image  = new JLabel(new ImageIcon(Main.imgh.img));
 		imagePanel.add(image);
-		
-		progressBar = new JProgressBar();
-		contentPane.add(progressBar, BorderLayout.SOUTH);
 		
 		
 		
