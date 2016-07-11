@@ -84,7 +84,6 @@ public class JFrame extends javax.swing.JFrame {
 		contentPane.add(imagePanel, BorderLayout.CENTER);
 		
 		image  = new JLabel(new ImageIcon(Main.imgh.img));
-		
 		imagePanel.add(image);
 		
 		
