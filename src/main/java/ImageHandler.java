@@ -22,7 +22,7 @@ public class ImageHandler {
 	public void setFile(File f){
 		try{
 			img = ImageIO.read(f);
-			JFrame.image = new JLabel(new ImageIcon(img));
+			JFrame.image.setIcon(new ImageIcon());
 			JFrame.imagePanel.repaint();
 			} catch(Exception e){
 				System.out.println(e);
