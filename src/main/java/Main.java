@@ -7,7 +7,7 @@ public class Main {
 	public static ImageHandler imgh = new ImageHandler();
 	
 	public static void main() {
-		System.out.println("Hello, World!");
+		System.out.println("Program loaded");
 	}
 	
 }
